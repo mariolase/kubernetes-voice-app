@@ -31,6 +31,6 @@ spec:
       - name: ${PROJECT_NAME}
         image: eu.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:${CIRCLE_SHA1}
         ports:
-        - name: http
+        - name: https
           containerPort: 8080
           protocol: TCP
