@@ -1,7 +1,7 @@
 FROM nginx:latest as builder
-COPY index.html /usr/src/html
+COPY index.html /usr/share/nginx/html/index.html
 MAINTAINER Richard Regan <riregan@deloitte.co.uk>
 
 FROM nginx:stable-alpine
-COPY --from=builder /usr/src/html/index.html /usr/src/html/index.html
+COPY --from=builder /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html
 
